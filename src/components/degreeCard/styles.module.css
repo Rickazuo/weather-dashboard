@@ -1,0 +1,139 @@
+.card {
+  background-image: url("../../assets/backgroundTemperatureNow.svg");
+  background-position: right;
+  background-size: cover;
+  border-radius: 10px;
+
+  width: 480px;
+  height: 480px;
+}
+
+.location {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  align-self: flex-end;
+
+  margin: 32px 32px 0 0;
+  padding: 0px;
+  gap: 4px;
+
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+
+  color: #c2bff4;
+}
+
+.degree {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 62px;
+  padding: 0px;
+  gap: 4px;
+}
+
+.temperatureNow {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 88px;
+  line-height: 106px;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #ffffff;
+}
+
+.minMax {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  gap: 10px;
+
+  text-align: center;
+
+  color: #c2bff4;
+}
+
+.minMax strong {
+  color: #ffffff;
+}
+
+.footerCards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 162px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 16px;
+  gap: 12px;
+
+  background: rgba(102, 96, 200, 0.6);
+  border-radius: 6px;
+}
+
+.information :nth-child(1) {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #e7e6fb;
+}
+
+.variables {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.variables :nth-child(1) {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+
+  text-align: center;
+
+  color: #e7e6fb;
+}
+
+.variables :nth-child(2) {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+
+  text-align: center;
+
+  color: #dad8f7;
+}

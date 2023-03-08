@@ -1,6 +1,20 @@
 .container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 32px;
+}
+
+.airAndSun {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.rightSide {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
