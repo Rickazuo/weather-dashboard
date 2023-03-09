@@ -1,5 +1,5 @@
 .Footer {
-  position: absolute;
+  position: relative;
   padding: 24px;
   background: rgb(135, 143, 250);
   background: linear-gradient(
@@ -9,15 +9,12 @@
   );
 
   box-shadow: 3px 4px 26px rgba(0, 0, 0, 0.25);
-  margin-top: 70px;
-  width: 100%;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
 
   gap: 10px;
-  bottom: 0;
-  height: auto;
 
   font-family: "Lato";
   font-style: normal;

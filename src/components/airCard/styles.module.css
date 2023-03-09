@@ -105,3 +105,21 @@
 
   color: #e7e6fb;
 }
+
+@media only screen and (max-width: 900px) {
+  .container {
+    width: auto;
+    height: auto;
+    width: 363px;
+    padding-bottom: 10px;
+  }
+
+  .infoFooter {
+    gap: 10px;
+    margin: auto;
+  }
+
+  .qualityAirFooter {
+    gap: 30px;
+  }
+}

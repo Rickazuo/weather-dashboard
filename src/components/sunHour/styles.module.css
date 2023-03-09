@@ -30,3 +30,12 @@
 
   color: #dad8f7;
 }
+
+@media only screen and (max-width: 900px) {
+  .container {
+    width: auto;
+    height: auto;
+    width: 363px;
+    padding-bottom: 10px;
+  }
+}

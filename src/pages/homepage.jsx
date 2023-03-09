@@ -7,8 +7,8 @@ import styles from "./stlyes.module.css";
 
 function HomePage() {
   return (
-    <div>
-      <div className={styles.container}>
+    <div className={styles.container}>
+      <div className={styles.containerCards}>
         <DegreeCard />
         <div className={styles.rightSide}>
           <div className={styles.airAndSun}>
