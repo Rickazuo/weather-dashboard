@@ -9,15 +9,22 @@ import * as api from "../api/weather";
 
 function HomePage() {
     const [weather, setWeather] = useState(null);
+    const [airQuality, setAirQuality] = useState(null);
 
     const getCurrentWeather = async () => {
         const { data } = await api.getCurrentWeather();
-        console.log(data);
         setWeather(data);
+    };
+
+    const getCurrentAirQuality = async () => {
+        const { data } = await api.getCurrentAirQuality();
+        console.log(data);
+        setAirQuality(data);
     };
 
     useEffect(() => {
         getCurrentWeather();
+        getCurrentAirQuality();
     }, []);
 
     const getSunTime = () => {
@@ -82,7 +89,23 @@ function HomePage() {
                 />
                 <div className={styles.rightSide}>
                     <div className={styles.airAndSun}>
-                        <AirCard />
+                        <AirCard
+                            carbon={
+                                airQuality?.hourly?.carbon_monoxide[0] || ""
+                            }
+                            nitrogen={
+                                airQuality?.hourly?.nitrogen_dioxide[0] || ""
+                            }
+                            ozone={airQuality?.hourly?.ozone[0] || ""}
+                            pm2_5={airQuality?.hourly?.pm2_5[0] || ""}
+                            pm10={airQuality?.hourly?.pm10[0] || ""}
+                            sulphur={
+                                airQuality?.hourly?.sulphur_dioxide[0] || ""
+                            }
+                            europeanEvaluation={
+                                airQuality?.hourly?.european_aqi[0] || ""
+                            }
+                        />
                         <SunHour
                             sunset={getSunTime().sunset}
                             sunrise={getSunTime().sunrise}
