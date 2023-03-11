@@ -1,60 +1,59 @@
 .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  /* align-items: center; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: center; */
 
-  height: 100vh;
-
-  margin-top: 180px;
+    margin-top: 150px;
+    margin-bottom: 150px;
 }
 
 .containerCards {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 
-  align-self: center;
+    align-self: center;
 
-  gap: 32px;
+    gap: 32px;
 }
 
 .airAndSun {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 
-  flex-wrap: wrap;
+    flex-wrap: wrap;
 
-  gap: 24px;
+    gap: 24px;
 }
 
 .rightSide {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 
-  gap: 24px;
+    gap: 24px;
 }
 
 @media only screen and (max-width: 900px) {
-  .container {
-    margin-top: 40px;
-  }
+    .container {
+        margin-top: 40px;
+    }
 
-  .containerCards {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
+    .containerCards {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
 
-  .airAndSun {
-    display: flex;
-    flex-direction: column;
-    width: auto;
-    height: auto;
-  }
+    .airAndSun {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: auto;
+    }
 }

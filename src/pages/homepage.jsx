@@ -18,7 +18,6 @@ function HomePage() {
 
     const getCurrentAirQuality = async () => {
         const { data } = await api.getCurrentAirQuality();
-        console.log(data);
         setAirQuality(data);
     };
 
@@ -63,63 +62,73 @@ function HomePage() {
     };
 
     return (
-        <div className={styles.container}>
-            <div className={styles.containerCards}>
-                <DegreeCard
-                    actualTemperature={
-                        weather
-                            ? `${parseInt(
-                                  weather?.current_weather?.temperature
-                              )}${weather?.daily_units?.temperature_2m_max}`
-                            : ""
-                    }
-                    maxTemperature={
-                        weather
-                            ? `${parseInt(
-                                  weather?.daily?.temperature_2m_max[0]
-                              )}${weather?.daily_units?.temperature_2m_max}`
-                            : ""
-                    }
-                    minTemperature={`${parseInt(
-                        weather?.daily?.temperature_2m_min[0]
-                    )}${weather?.daily_units?.temperature_2m_min}`}
-                    wind={weather?.current_weather?.windspeed}
-                    humidity={weather?.hourly?.relativehumidity_2m[0]}
-                    rain={weather?.hourly?.rain[0]}
-                />
-                <div className={styles.rightSide}>
-                    <div className={styles.airAndSun}>
-                        <AirCard
-                            carbon={
-                                airQuality?.hourly?.carbon_monoxide[0] || ""
+        <div
+            style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+                height: "100%",
+            }}
+        >
+            <div className={styles.container}>
+                <div className={styles.containerCards}>
+                    <DegreeCard
+                        actualTemperature={
+                            weather
+                                ? `${parseInt(
+                                      weather?.current_weather?.temperature
+                                  )}${weather?.daily_units?.temperature_2m_max}`
+                                : ""
+                        }
+                        maxTemperature={
+                            weather
+                                ? `${parseInt(
+                                      weather?.daily?.temperature_2m_max[0]
+                                  )}${weather?.daily_units?.temperature_2m_max}`
+                                : ""
+                        }
+                        minTemperature={`${parseInt(
+                            weather?.daily?.temperature_2m_min[0]
+                        )}${weather?.daily_units?.temperature_2m_min}`}
+                        wind={weather?.current_weather?.windspeed}
+                        humidity={weather?.hourly?.relativehumidity_2m[0]}
+                        rain={weather?.hourly?.rain[0]}
+                    />
+                    <div className={styles.rightSide}>
+                        <div className={styles.airAndSun}>
+                            <AirCard
+                                carbon={
+                                    airQuality?.hourly?.carbon_monoxide[0] || ""
+                                }
+                                nitrogen={
+                                    airQuality?.hourly?.nitrogen_dioxide[0] ||
+                                    ""
+                                }
+                                ozone={airQuality?.hourly?.ozone[0] || ""}
+                                pm2_5={airQuality?.hourly?.pm2_5[0] || ""}
+                                pm10={airQuality?.hourly?.pm10[0] || ""}
+                                sulphur={
+                                    airQuality?.hourly?.sulphur_dioxide[0] || ""
+                                }
+                                europeanEvaluation={
+                                    airQuality?.hourly?.european_aqi[0] || ""
+                                }
+                            />
+                            <SunHour
+                                sunset={getSunTime().sunset}
+                                sunrise={getSunTime().sunrise}
+                                currentTime={getSunTime().time}
+                            />
+                        </div>
+                        <WeekWeather
+                            minWeeklyTemperature={
+                                weather?.daily?.temperature_2m_min
                             }
-                            nitrogen={
-                                airQuality?.hourly?.nitrogen_dioxide[0] || ""
+                            maxWeeklyTemperature={
+                                weather?.daily?.temperature_2m_max
                             }
-                            ozone={airQuality?.hourly?.ozone[0] || ""}
-                            pm2_5={airQuality?.hourly?.pm2_5[0] || ""}
-                            pm10={airQuality?.hourly?.pm10[0] || ""}
-                            sulphur={
-                                airQuality?.hourly?.sulphur_dioxide[0] || ""
-                            }
-                            europeanEvaluation={
-                                airQuality?.hourly?.european_aqi[0] || ""
-                            }
-                        />
-                        <SunHour
-                            sunset={getSunTime().sunset}
-                            sunrise={getSunTime().sunrise}
-                            currentTime={getSunTime().time}
                         />
                     </div>
-                    <WeekWeather
-                        minWeeklyTemperature={
-                            weather?.daily?.temperature_2m_min
-                        }
-                        maxWeeklyTemperature={
-                            weather?.daily?.temperature_2m_max
-                        }
-                    />
                 </div>
             </div>
             <Footer />
