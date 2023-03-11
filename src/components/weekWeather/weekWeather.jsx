@@ -5,49 +5,107 @@ import rain from "../../assets/cloudRain.svg";
 import storm from "../../assets/cloudStorm.svg";
 import sunAndCloud from "../../assets/sunAndCloud.svg";
 
-export default function WeekWeather() {
-  return (
-    <div className={styles.container}>
-      <div className={styles.infos}>
-        <h3>Amanhã</h3>
-        <img src={cloudy} alt="cloudy icon" />
-        <div className={styles.footerTemperature}>
-          <span>21</span>
-          <span>16</span>
+export default function WeekWeather({
+    minWeeklyTemperature,
+    maxWeeklyTemperature,
+}) {
+    const weekDays = [
+        "Domingo",
+        "Segunda",
+        "Terça",
+        "Quarta",
+        "Quinta",
+        "Sexta",
+        "Sábado",
+    ];
+
+    const getCircularDay = (daysToAdd) => {
+        const currentDay = new Date().getDay();
+        let goalDay = currentDay;
+
+        for (let i = 0; i < daysToAdd; i++) {
+            goalDay++;
+            if (goalDay === weekDays.length - 1) {
+                goalDay = 0;
+            }
+        }
+        console.log(goalDay);
+
+        return goalDay;
+    };
+
+    return (
+        <div className={styles.container}>
+            <div className={styles.infos}>
+                <h3>Amanhã</h3>
+                <img src={cloudy} alt="cloudy icon" />
+                <div className={styles.footerTemperature}>
+                    <span>
+                        {maxWeeklyTemperature &&
+                            maxWeeklyTemperature[getCircularDay(1)]}
+                    </span>
+                    <span>
+                        {minWeeklyTemperature &&
+                            minWeeklyTemperature[getCircularDay(1)]}
+                    </span>
+                </div>
+            </div>
+            <div className={styles.infos}>
+                <h3>{weekDays[getCircularDay(2)]}</h3>
+                <img src={bigSun} alt="big sun icon" />
+                <div className={styles.footerTemperature}>
+                    <span>
+                        {maxWeeklyTemperature &&
+                            maxWeeklyTemperature[getCircularDay(2)]}
+                    </span>
+                    <span>
+                        {minWeeklyTemperature &&
+                            minWeeklyTemperature[getCircularDay(2)]}
+                    </span>
+                </div>
+            </div>
+            <div className={styles.infos}>
+                <h3>{weekDays[getCircularDay(3)]}</h3>
+                <img src={rain} alt="rain icon" />
+                <div className={styles.footerTemperature}>
+                    <span>
+                        {maxWeeklyTemperature &&
+                            maxWeeklyTemperature[getCircularDay(3)]}
+                    </span>
+                    <span>
+                        {minWeeklyTemperature &&
+                            minWeeklyTemperature[getCircularDay(3)]}
+                    </span>
+                </div>
+            </div>
+            <div className={styles.infos}>
+                <h3>{weekDays[getCircularDay(4)]}</h3>
+                <img src={storm} alt="storm icon" />
+                <div className={styles.footerTemperature}>
+                    <span>
+                        {maxWeeklyTemperature &&
+                            maxWeeklyTemperature[getCircularDay(4)]}
+                    </span>
+                    <span>
+                        {minWeeklyTemperature &&
+                            minWeeklyTemperature[getCircularDay(4)]}
+                    </span>
+                </div>
+            </div>
+            <div className={styles.infos}>
+                <h3>{weekDays[getCircularDay(5)]}</h3>
+                <img src={sunAndCloud} alt="icon of a sun behind the cloud" />
+                <div className={styles.footerTemperature}>
+                    <span>
+                        {maxWeeklyTemperature &&
+                            minWeeklyTemperature[getCircularDay(5)]}
+                    </span>
+                    <span>
+                        {maxWeeklyTemperature &&
+                            minWeeklyTemperature[getCircularDay(5)]}
+                    </span>
+                </div>
+            </div>
         </div>
-      </div>
-      <div className={styles.infos}>
-        <h3>Sexta-Feira</h3>
-        <img src={bigSun} alt="big sun icon" />
-        <div className={styles.footerTemperature}>
-          <span>21</span>
-          <span>16</span>
-        </div>
-      </div>
-      <div className={styles.infos}>
-        <h3>Sábado</h3>
-        <img src={rain} alt="rain icon" />
-        <div className={styles.footerTemperature}>
-          <span>21</span>
-          <span>16</span>
-        </div>
-      </div>
-      <div className={styles.infos}>
-        <h3>Domingo</h3>
-        <img src={storm} alt="storm icon" />
-        <div className={styles.footerTemperature}>
-          <span>21</span>
-          <span>16</span>
-        </div>
-      </div>
-      <div className={styles.infos}>
-        <h3>Segunda-Feira</h3>
-        <img src={sunAndCloud} alt="icon of a sun behind the cloud" />
-        <div className={styles.footerTemperature}>
-          <span>21</span>
-          <span>16</span>
-        </div>
-      </div>
-    </div>
-  );
+    );
 }
