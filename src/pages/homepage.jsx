@@ -20,12 +20,55 @@ function HomePage() {
         getCurrentWeather();
     }, []);
 
+    const getSunTime = () => {
+        let sunset = "",
+            sunrise = "",
+            time = "";
+
+        if (weather) {
+            sunset = new Date(weather?.daily?.sunset[0]);
+            sunset = `${sunset.getHours().toString().padStart(2, "0")}:${sunset
+                .getMinutes()
+                .toString()
+                .padStart(2, "0")}`;
+
+            sunrise = new Date(weather?.daily?.sunrise[0]);
+            sunrise = `${sunrise
+                .getHours()
+                .toString()
+                .padStart(2, "0")}:${sunrise
+                .getMinutes()
+                .toString()
+                .padStart(2, "0")}`;
+
+            time = new Date();
+            time = `${time.getHours().toString().padStart(2, "0")}:${time
+                .getMinutes()
+                .toString()
+                .padStart(2, "0")}`;
+        }
+
+        return {
+            sunset,
+            sunrise,
+            time,
+        };
+    };
+
     return (
         <div className={styles.container}>
             <div className={styles.containerCards}>
                 <DegreeCard
-                    actualTemperature={`${weather?.current_weather?.temperature}${weather?.daily_units?.temperature_2m_max}`}
-                    maxTemperature={`${weather?.daily?.temperature_2m_max[0]}${weather?.daily_units?.temperature_2m_max}`}
+                    actualTemperature={
+                        weather
+                            ? `${weather?.current_weather?.temperature}${weather?.daily_units?.temperature_2m_max}`
+                            : ""
+                    }
+                    maxTemperature={
+                        weather
+                            ? `${weather?.daily?.temperature_2m_max[0]}${weather?.daily_units?.temperature_2m_max}`
+                            : ""
+                    }
                     minTemperature={`${weather?.daily?.temperature_2m_min[0]}${weather?.daily_units?.temperature_2m_min}`}
                     wind={weather?.current_weather?.windspeed}
                     humidity={weather?.hourly?.relativehumidity_2m[0]}
@@ -34,7 +77,11 @@ function HomePage() {
                 <div className={styles.rightSide}>
                     <div className={styles.airAndSun}>
                         <AirCard />
-                        <SunHour />
+                        <SunHour
+                            sunset={getSunTime().sunset}
+                            sunrise={getSunTime().sunrise}
+                            currentTime={getSunTime().time}
+                        />
                     </div>
                     <WeekWeather
                         minWeeklyTemperature={

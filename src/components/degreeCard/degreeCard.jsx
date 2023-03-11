@@ -5,12 +5,12 @@ import humidityIcon from "../../assets/humidity.svg";
 import rainIcon from "../../assets/rain.svg";
 
 export default function DegreeCard({
-    actualTemperature = "",
-    maxTemperature = "",
-    minTemperature = "",
-    wind = "",
-    humidity = "",
-    rain = "",
+    actualTemperature,
+    maxTemperature,
+    minTemperature,
+    wind,
+    humidity,
+    rain,
 }) {
     return (
         <div className={styles.card}>

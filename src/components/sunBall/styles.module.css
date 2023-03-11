@@ -1,0 +1,53 @@
+.container {
+    position: relative;
+    height: 100px;
+    width: 200px;
+}
+
+.path {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 110px;
+    width: 200px;
+    margin-top: -40px;
+    margin-left: -100px;
+    border-radius: 0 0 100px 100px;
+    transform: rotate(180deg);
+    border: 1px solid #e5bb46;
+    background: linear-gradient(
+        180deg,
+        rgba(251, 219, 96, 0.2) 0%,
+        rgba(251, 219, 96, 0) 101.89%
+    );
+    overflow: hidden;
+    z-index: -1;
+}
+.insidePath {
+    background: #6d67d0;
+    height: 110px;
+}
+
+.ball {
+    position: absolute;
+    top: 105px;
+    left: -9px;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: #e5bb46;
+}
+
+.time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    z-index: 3;
+    font-family: "Lato";
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #ffffff;
+}

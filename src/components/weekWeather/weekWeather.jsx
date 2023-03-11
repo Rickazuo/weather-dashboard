@@ -24,12 +24,11 @@ export default function WeekWeather({
         let goalDay = currentDay;
 
         for (let i = 0; i < daysToAdd; i++) {
-            goalDay++;
             if (goalDay === weekDays.length - 1) {
                 goalDay = 0;
             }
+            goalDay++;
         }
-        console.log(goalDay);
 
         return goalDay;
     };
@@ -43,10 +42,12 @@ export default function WeekWeather({
                     <span>
                         {maxWeeklyTemperature &&
                             maxWeeklyTemperature[getCircularDay(1)]}
+                        º
                     </span>
                     <span>
                         {minWeeklyTemperature &&
                             minWeeklyTemperature[getCircularDay(1)]}
+                        º
                     </span>
                 </div>
             </div>
@@ -57,10 +58,12 @@ export default function WeekWeather({
                     <span>
                         {maxWeeklyTemperature &&
                             maxWeeklyTemperature[getCircularDay(2)]}
+                        º
                     </span>
                     <span>
                         {minWeeklyTemperature &&
                             minWeeklyTemperature[getCircularDay(2)]}
+                        º
                     </span>
                 </div>
             </div>
@@ -71,10 +74,12 @@ export default function WeekWeather({
                     <span>
                         {maxWeeklyTemperature &&
                             maxWeeklyTemperature[getCircularDay(3)]}
+                        º
                     </span>
                     <span>
                         {minWeeklyTemperature &&
                             minWeeklyTemperature[getCircularDay(3)]}
+                        º
                     </span>
                 </div>
             </div>
@@ -85,10 +90,12 @@ export default function WeekWeather({
                     <span>
                         {maxWeeklyTemperature &&
                             maxWeeklyTemperature[getCircularDay(4)]}
+                        º
                     </span>
                     <span>
                         {minWeeklyTemperature &&
                             minWeeklyTemperature[getCircularDay(4)]}
+                        º
                     </span>
                 </div>
             </div>
@@ -99,10 +106,12 @@ export default function WeekWeather({
                     <span>
                         {maxWeeklyTemperature &&
                             minWeeklyTemperature[getCircularDay(5)]}
+                        º
                     </span>
                     <span>
                         {maxWeeklyTemperature &&
                             minWeeklyTemperature[getCircularDay(5)]}
+                        º
                     </span>
                 </div>
             </div>
