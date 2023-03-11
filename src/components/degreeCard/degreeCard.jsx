@@ -16,7 +16,7 @@ export default function DegreeCard({
         <div className={styles.card}>
             <div className={styles.location}>
                 <img src={pin} alt="a pin image of location" />
-                Rio do Sul, SC
+                São Paulo, SP
             </div>
             <div className={styles.degree}>
                 <div className={styles.temperatureNow}>{actualTemperature}</div>

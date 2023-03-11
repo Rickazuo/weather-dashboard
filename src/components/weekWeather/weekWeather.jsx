@@ -41,12 +41,12 @@ export default function WeekWeather({
                 <div className={styles.footerTemperature}>
                     <span>
                         {maxWeeklyTemperature &&
-                            maxWeeklyTemperature[getCircularDay(1)]}
+                            parseInt(maxWeeklyTemperature[getCircularDay(1)])}
                         º
                     </span>
                     <span>
                         {minWeeklyTemperature &&
-                            minWeeklyTemperature[getCircularDay(1)]}
+                            parseInt(minWeeklyTemperature[getCircularDay(1)])}
                         º
                     </span>
                 </div>
@@ -57,12 +57,12 @@ export default function WeekWeather({
                 <div className={styles.footerTemperature}>
                     <span>
                         {maxWeeklyTemperature &&
-                            maxWeeklyTemperature[getCircularDay(2)]}
+                            parseInt(maxWeeklyTemperature[getCircularDay(2)])}
                         º
                     </span>
                     <span>
                         {minWeeklyTemperature &&
-                            minWeeklyTemperature[getCircularDay(2)]}
+                            parseInt(minWeeklyTemperature[getCircularDay(2)])}
                         º
                     </span>
                 </div>
@@ -73,12 +73,12 @@ export default function WeekWeather({
                 <div className={styles.footerTemperature}>
                     <span>
                         {maxWeeklyTemperature &&
-                            maxWeeklyTemperature[getCircularDay(3)]}
+                            parseInt(maxWeeklyTemperature[getCircularDay(3)])}
                         º
                     </span>
                     <span>
                         {minWeeklyTemperature &&
-                            minWeeklyTemperature[getCircularDay(3)]}
+                            parseInt(minWeeklyTemperature[getCircularDay(3)])}
                         º
                     </span>
                 </div>
@@ -89,12 +89,12 @@ export default function WeekWeather({
                 <div className={styles.footerTemperature}>
                     <span>
                         {maxWeeklyTemperature &&
-                            maxWeeklyTemperature[getCircularDay(4)]}
+                            parseInt(maxWeeklyTemperature[getCircularDay(4)])}
                         º
                     </span>
                     <span>
                         {minWeeklyTemperature &&
-                            minWeeklyTemperature[getCircularDay(4)]}
+                            parseInt(minWeeklyTemperature[getCircularDay(4)])}
                         º
                     </span>
                 </div>
@@ -105,12 +105,12 @@ export default function WeekWeather({
                 <div className={styles.footerTemperature}>
                     <span>
                         {maxWeeklyTemperature &&
-                            minWeeklyTemperature[getCircularDay(5)]}
+                            parseInt(minWeeklyTemperature[getCircularDay(5)])}
                         º
                     </span>
                     <span>
                         {maxWeeklyTemperature &&
-                            minWeeklyTemperature[getCircularDay(5)]}
+                            parseInt(minWeeklyTemperature[getCircularDay(5)])}
                         º
                     </span>
                 </div>

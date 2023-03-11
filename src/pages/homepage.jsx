@@ -61,15 +61,21 @@ function HomePage() {
                 <DegreeCard
                     actualTemperature={
                         weather
-                            ? `${weather?.current_weather?.temperature}${weather?.daily_units?.temperature_2m_max}`
+                            ? `${parseInt(
+                                  weather?.current_weather?.temperature
+                              )}${weather?.daily_units?.temperature_2m_max}`
                             : ""
                     }
                     maxTemperature={
                         weather
-                            ? `${weather?.daily?.temperature_2m_max[0]}${weather?.daily_units?.temperature_2m_max}`
+                            ? `${parseInt(
+                                  weather?.daily?.temperature_2m_max[0]
+                              )}${weather?.daily_units?.temperature_2m_max}`
                             : ""
                     }
-                    minTemperature={`${weather?.daily?.temperature_2m_min[0]}${weather?.daily_units?.temperature_2m_min}`}
+                    minTemperature={`${parseInt(
+                        weather?.daily?.temperature_2m_min[0]
+                    )}${weather?.daily_units?.temperature_2m_min}`}
                     wind={weather?.current_weather?.windspeed}
                     humidity={weather?.hourly?.relativehumidity_2m[0]}
                     rain={weather?.hourly?.rain[0]}
