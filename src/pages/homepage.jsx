@@ -4,6 +4,7 @@ import DegreeCard from "../components/degreeCard/degreeCard";
 import Footer from "../components/footer/footer";
 import SunHour from "../components/sunHour/sunHour";
 import WeekWeather from "../components/weekWeather/weekWeather";
+import weatherIcon from "../assets/weather.svg";
 import styles from "./stlyes.module.css";
 import * as api from "../api/weather";
 
@@ -72,6 +73,13 @@ function HomePage() {
         >
             <div className={styles.container}>
                 <div className={styles.containerCards}>
+                    <div style={{ alignSelf: "flex-start" }}>
+                        <img
+                            src={weatherIcon}
+                            className={styles.weather}
+                            alt="weather"
+                        />
+                    </div>
                     <DegreeCard
                         actualTemperature={
                             weather

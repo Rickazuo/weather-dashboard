@@ -37,6 +37,12 @@
     gap: 24px;
 }
 
+.weather {
+    width: 140px;
+    position: absolute;
+    margin-top: -60px;
+}
+
 @media only screen and (max-width: 900px) {
     .container {
         margin-top: 40px;
@@ -55,5 +61,14 @@
         flex-direction: column;
         width: auto;
         height: auto;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .weather {
+        width: 80px;
+        position: absolute;
+        margin-top: 0px;
+        margin-left: -10px;
     }
 }
