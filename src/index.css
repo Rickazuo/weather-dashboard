@@ -1,23 +1,21 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    width: 100vw;
     overflow-x: hidden;
-    background-image: url("./assets/background.png");
+}
+
+
+#root {
+    padding-top: 100px;
+    width: 100vw;
+    background-image: url("./assets/Background.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 100vh;
-}
-
-#root {
-    height: 100% !important;
+    min-height: 100vh;
+    position: relative;
 }
