@@ -48,7 +48,7 @@ Para mostrar os dados meteorologicos foi usado a [Weather Forecast API](https://
 
 No projeto usado, utilizamos como referência a cidade de São Paulo, e consequentemente seus dados meteorologicos. Para a utilização de outras cidades, é necessário modificar as coordenadas de latitude e longitude.
 
-_<h2 align="center" ><a href="https://currency-converter-rocketseat.vercel.app" target="_blank">Visite o projeto online</a></h2>_
+_<h2 align="center" ><a href="weather-dashboard-eosin.vercel.app" target="_blank">Visite o projeto online</a></h2>_
 
 ## 🔖 Layout
 

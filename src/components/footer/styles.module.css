@@ -1,5 +1,6 @@
 .Footer {
-  position: relative;
+  bottom: 0;
+  position: absolute;
   padding: 24px;
   background: rgb(135, 143, 250);
   background: linear-gradient(
