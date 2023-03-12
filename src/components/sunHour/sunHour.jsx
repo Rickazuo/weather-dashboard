@@ -1,17 +1,19 @@
 import styles from "./styles.module.css";
 import sun from "../../assets/sun.svg";
-import chartSun from "../../assets/chartExampleSun.svg";
+import Ball from "../sunBall/sunBall";
 
-export default function () {
-  return (
-    <div className={styles.container}>
-      <h1 className={styles.title}>
-        <img src={sun} alt="" />
-        <span>Horário do sol</span>
-      </h1>
-      <div>
-        <img src={chartSun} alt="Chart about sun hour" />
-      </div>
-    </div>
-  );
+export default function ({ sunset, sunrise, currentTime }) {
+    return (
+        <div className={styles.container}>
+            <h1 className={styles.title}>
+                <img src={sun} alt="" />
+                <span>Horário do sol</span>
+            </h1>
+            <Ball sunset={sunset} sunrise={sunrise} currentTime={currentTime} />
+            <div className={styles.baseSunTime}>
+                <div>{sunrise}</div>
+                <div>{sunset}</div>
+            </div>
+        </div>
+    );
 }
