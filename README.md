@@ -14,19 +14,19 @@ Criação de uma página de clima é o #10 desafio <a href="https://boracodar.de
 <br>
 
 <p align="center" id="-layout">
-  <img alt="climate project gif" src="./src/assets/climate.gif" width="100%">
+  <img alt="climate project gif" src="./src/assets/weatherDashboard.gif" width="100%">
 </p>
 
 ## 🚀 Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
--   HTML
--   CSS
--   JavaScript
--   React
--   Git e Github
--   Figma
+- HTML
+- CSS
+- JavaScript
+- React
+- Git e Github
+- Figma
 
 ## 💻 Projeto
 
@@ -42,9 +42,11 @@ O desafio inicial foi a criação do layout de uma página com informações cli
   API utilizada
 </h2>
 
-Utilizamos um site com APIs Open Source chamado _Open meteo_, ele é gratuíto e não tem necessidade de um API_token, além dessa facilitação, ele tem um URL builder, em que você seleciona os parâmetros desejados na interface e ele te mostra a URL que deve ser utilizada.
+Utilizamos um site com APIs Open Source chamado _Open meteo_, ele é gratuito e não tem necessidade de um API_token, além dessa facilitação, ele tem um URL builder, em que você seleciona os parâmetros desejados na interface e ele te mostra a URL que deve ser utilizada.
 
 Para mostrar os dados meteorologicos foi usado a [Weather Forecast API](https://open-meteo.com/en/docs) e para os dados de qualidade do ar, usamos o [Air Quality API](https://open-meteo.com/en/docs/air-quality-api). Além disso, vale ressaltar que foi usada a métrica Européia de classificação da qualidade do ar.
+
+No projeto usado, utilizamos como referência a cidade de São Paulo, e consequentemente seus dados meteorologicos. Para a utilização de outras cidades, é necessário modificar as coordenadas de latitude e longitude.
 
 _<h2 align="center" ><a href="https://currency-converter-rocketseat.vercel.app" target="_blank">Visite o projeto online</a></h2>_
 
