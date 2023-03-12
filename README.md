@@ -55,7 +55,7 @@ _<h2 align="center" ><a href="https://weather-dashboard-eosin.vercel.app" target
 Você pode visualizar o layout proposto pela RocketSeat através do da <a href="#-layout-figma">imagem abaixo</a>. Disponibilizado pelo [Figma](https://figma.com) durante o período do desafio.
 
 <p align="center" id="-layout-figma">
-  <img alt="weather figma" src="./src/assets/figma.png" width="100%">
+  <img alt="weather figma" src="./src/assets/figma-weather.png" width="100%">
 </p>
 
 ## 📃 Collaborators
