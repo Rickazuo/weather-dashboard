@@ -48,14 +48,14 @@ Para mostrar os dados meteorologicos foi usado a [Weather Forecast API](https://
 
 No projeto usado, utilizamos como referência a cidade de São Paulo, e consequentemente seus dados meteorologicos. Para a utilização de outras cidades, é necessário modificar as coordenadas de latitude e longitude.
 
-_<h2 align="center" ><a href="weather-dashboard-eosin.vercel.app" target="_blank">Visite o projeto online</a></h2>_
+_<h2 align="center" ><a href="https://weather-dashboard-eosin.vercel.app" target="_blank">Visite o projeto online</a></h2>_
 
 ## 🔖 Layout
 
 Você pode visualizar o layout proposto pela RocketSeat através do da <a href="#-layout-figma">imagem abaixo</a>. Disponibilizado pelo [Figma](https://figma.com) durante o período do desafio.
 
 <p align="center" id="-layout-figma">
-  <img alt="currency converter" src="./src/assets/figma.png" width="100%">
+  <img alt="weather figma" src="./src/assets/figma-weather.png" width="100%">
 </p>
 
 ## 📃 Collaborators
